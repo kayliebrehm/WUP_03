@@ -44,6 +44,8 @@ The graph shows a very low median number of drinks for each group, although they
 favstats(alcohol~Seat,data=davisdata)
 ```
 
+The mean for those in the back is 9.625000 and the median is 4. The median for the front is 0, and it is 1 for the middle. The mean for those in the front is 1.803030 and 3.283133 for middle. Based on these numbers, we can see a difference in average number of drinks for each row. 
+
 ### Inferential Results
 
 AOV
