@@ -21,7 +21,7 @@ $H_0$: There is no difference between the average number of drinks imbibed betwe
 $H_A$: The average number drinks is different between at least two rows.  
 
 ## Methods
-To examine the average number of drinks students imbibed, numerical, conditioned on the row they sit in, categorical, I will do a numerical categorical analysis. I will also complete a T-Test to compare drink number in correlation to row sat in.
+To examine the average number of drinks students imbibed, numerical, conditioned on the row they sit in, categorical, I will do a numerical categorical analysis. I will also complete a T-Test to compare drink number in correlation to row sat in. The three categories for seat row are front, back, and center.
 
 
 ## Results
@@ -36,14 +36,21 @@ Boxplot
 basicCN + geom_boxplot()
 ```
 
+The graph shows a very low median number of drinks for each group, although they are different. The first quartile for each group is at or near zero. The back has a higher third quartile than the other two groups and therefore a larger interquartile range. The back group also has some extreme outliers. While the middle had moderate outliers and the front had little. The interquartile range is smallest in the front group.
+
 ### Numerical Results
 
-Numerical Chart
 ```{r}
 favstats(alcohol~Seat,data=davisdata)
 ```
 
 ### Inferential Results
+
+AOV
+```{r}
+model1 <- aov(alcohol~Seat,data=davisdata)
+summary.aov(model1)
+```
 
 ## Discussion and Conclusion
 
