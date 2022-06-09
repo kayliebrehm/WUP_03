@@ -63,4 +63,4 @@ This model provides a closer look into the calculated difference of means betwee
 
 ## Discussion and Conclusion
 
- 
+The inferential and numerical results allow me to reject the null hypothesis. There is a clear difference in mean, median, and standard deviation numbers for amount of drinks consumed in relation to seat position. Within the graphical results, we see a visual depiction of this. Whether or not drink values are dependent on seat placement, is up for debate. But, I can say for certain that there is a different in average drink number in at least two rows.
