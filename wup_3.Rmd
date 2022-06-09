@@ -14,30 +14,37 @@ require(tidyverse)
 require(tigerstats)
 davisdata <- read.csv(file="UCDavis.csv")
 ```
-## Our Goal is to answer this question Is there a difference between the alcohol consumed between the row you choose to sit in??
 
-## Now with ggplot - first select the basic data
+## Is there a difference between the alcohol consumed and the row you choose to sit in??
+$H_0$: There is no difference between the average number of drinks imbibed between people conditioned on the row they sit in.
 
+$H_A$: The average number drinks is different between at least two rows.  
+
+## Methods
+To examine the average number of drinks students imbibed, numerical, conditioned on the row they sit in, categorical, I will do a numerical categorical analysis. I will also complete a T-Test to compare drink number in correlation to row sat in.
+
+
+## Results
+
+### Graphical Results
 ```{r}
 basicCN <- ggplot(davisdata,aes(y=alcohol,x=Seat))
 ```
-## Now add in boxplot
 
+Boxplot
 ```{r}
 basicCN + geom_boxplot()
 ```
-  
-  
-### get fancy  
 
+### Numerical Results
+
+Numerical Chart
 ```{r}
-basicCN + geom_boxplot(notch=TRUE,outlier.color = "red") + stat_boxplot(geom ='errorbar') + labs(title="Fancy notch boxplot \n with 2 lines")
+favstats(alcohol~Seat,data=davisdata)
 ```
 
-## Numerical Summarys 
+### Inferential Results
 
-## Inferential Tests
-
-## Conclusions
+## Discussion and Conclusion
 
 
