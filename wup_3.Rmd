@@ -53,7 +53,14 @@ AOV
 model1 <- aov(alcohol~Seat,data=davisdata)
 summary.aov(model1)
 ```
+This model shows some further information on standard deviation, mean and f value. Since the significance f value is so small, it rejects the null hypothesis.
+
+```{r}
+plot(TukeyHSD(model1))
+```
+
+This model provides a closer look into the calculated difference of means between each group. This piece of data alone allows me to reject the null hypothesis since there is an observably difference.
 
 ## Discussion and Conclusion
 
-
+ 
